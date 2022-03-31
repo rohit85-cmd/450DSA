@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -25,7 +25,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { alpha } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
 import Avtar from "./Avtar";
-
+import { questions } from "../data/questionsdata";
 const drawerWidth = 240;
 
 const Search = styled("div")(({ theme }) => ({
@@ -37,7 +37,7 @@ const Search = styled("div")(({ theme }) => ({
   },
   marginRight: theme.spacing(2),
   marginLeft: 0,
-  width: "50%",
+  width: "100%",
   [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(3),
     width: "auto",
@@ -87,8 +87,6 @@ const Main = styled("main", { shouldForwardProp: (prop) => prop !== "open" })(
   })
 );
 
-
-
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
@@ -116,9 +114,14 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 }));
 
 export default function DrawerMenu() {
+  const [searchValue, setSearchValue] = useState("");
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
-
+  const [open, setOpen] = useState(true);
+  const [questionsArray, setQuestionsArray] = useState(
+    questions.filter((item) => {
+      return item.question.toLowerCase().includes(searchValue.toLowerCase());
+    })
+  );
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -131,7 +134,7 @@ export default function DrawerMenu() {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
-        <Toolbar sx={{ justifyContent: "space-between",display:"flex" }}>
+        <Toolbar sx={{ justifyContent: "space-between", display: "flex" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -145,8 +148,9 @@ export default function DrawerMenu() {
             Persistent drawer
           </Typography> */}
 
-          
-            
+          <div
+            style={{ display: "flex", flexDirection: "row-reverse", flex: 3 }}
+          >
             <Search>
               <SearchIconWrapper>
                 <SearchIcon />
@@ -154,12 +158,27 @@ export default function DrawerMenu() {
               <StyledInputBase
                 placeholder="Search…"
                 inputProps={{ "aria-label": "search" }}
+                value={searchValue}
+                onChange={(e) => {
+                  setSearchValue(e.target.value);
+                  setQuestionsArray([
+                    ...questions.filter((item) => {
+                      return item.question
+                        .toLowerCase()
+                        .includes(e.target.value.toLowerCase());
+                    }),
+                    ...questions.filter((item) => {
+                      return item.category
+                        .toLowerCase()
+                        .includes(e.target.value.toLowerCase());
+                    }),
+                  ]);
+                }}
               />
             </Search>
+          </div>
 
-            <Avtar img={require("./Images/MyImg.jpg")} />
-            
-          
+          <Avtar img={require("./Images/MyImg.jpg")} />
         </Toolbar>
       </AppBar>
       <Drawer
@@ -195,7 +214,18 @@ export default function DrawerMenu() {
         <List>
           {categories.map((text, index) => (
             <ListItem button key={text} sx={{ textAlign: "center" }}>
-              <ListItemText primary={text} />
+              <ListItemText
+                primary={text}
+                onClick={() => {
+                  setQuestionsArray(
+                    questions.filter((item) => {
+                      return item.category
+                        .toLowerCase()
+                        .includes(text.toLowerCase());
+                    })
+                  );
+                }}
+              />
             </ListItem>
           ))}
         </List>
@@ -210,7 +240,7 @@ export default function DrawerMenu() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <Questions />
+        <Questions questionsArray={questionsArray} />
       </Main>
     </Box>
   );

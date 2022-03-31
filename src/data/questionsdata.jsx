@@ -1,104 +1,117 @@
 export const questions = [
   {
-    Id: 1,
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+    id: 1,
+    question: "Jay maharashtra",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array",
   },
   {
-    Id: 2,
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+    id: 2,
+    question: "how are you",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array",
   },
   {
-    Id: 3,
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+    id: 3,
+    question: "i am fine",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array",
   },
   {
-    Id: 4,
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+    id: 4,
+    question: "are you fine",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array",
   },
   {
-    Id: 5,
+    id: 5,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array",
   },
   {
-    Id: 6,
+    id: 6,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "String",
   },
   {
-    Id: 7,
+    id: 7,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "String",
   },
   {
-    Id: 8,
+    id: 8,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "String",
   },
   {
-    Id: 9,
+    id: 9,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "String",
   },
   {
-    Id: 10,
+    id: 10,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "String",
   },
   {
-    Id: 11,
+    id: 11,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "String",
   },
   {
-    Id: 12,
+    id: 12,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array",
   },
   {
-    Id: 13,
+    id: 13,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array2",
   },
   {
-    Id: 14,
+    id: 14,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array2",
   },
   {
-    Id: 15,
+    id: 15,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array2",
   },
   {
-    Id: 16,
+    id: 16,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "Array2",
   },
   {
-    Id: 17,
+    id: 17,
     question:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
+    category: "are",
   },
 ];
