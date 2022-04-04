@@ -1,53 +1,53 @@
 export const questions = [
   {
     id: 1,
-    question: "Jay maharashtra",
+    question: "Reverse the array",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "Array",
   },
   {
     id: 2,
-    question: "how are you",
+    question: 'Find the "Kth" max and min element of an array ',
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "Array",
   },
   {
     id: 3,
-    question: "i am fine",
+    question: "Minimise the maximum difference between heights [V.IMP]",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "Array",
   },
   {
     id: 4,
-    question: "are you fine",
+    question: "find duplicate in an array of N+1 Integers",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "Array",
   },
   {
     id: 5,
     question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+      "Rearrange the array in alternating positive and negative items with O(1) extra space",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "Array",
   },
   {
     id: 6,
     question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+      'Given an array of size n and a number k, fin all elements that appear more than " n/k " times.',
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "String",
   },
   {
     id: 7,
     question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+      "Find whether an array is a subset of another array",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "String",
   },
   {
     id: 8,
     question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+      "Three way partitioning of an array around a given value",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "String",
   },
@@ -61,14 +61,14 @@ export const questions = [
   {
     id: 10,
     question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+      "Rotate matrix by 90 degrees",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "String",
   },
   {
     id: 11,
     question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos recusandae nihil suscipit ipsam cupiditate, velit a quisquam maxime iste excepturi commodi sint animi quis dolores consequuntur, corporis sunt placeat incidunt!",
+      "Write a Code to check whether one string is a rotation of another",
     link: "https://practice.geeksforgeeks.org/explore?page=1&company[]=Amazon&sortBy=submissions",
     category: "String",
   },

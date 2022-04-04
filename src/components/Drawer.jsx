@@ -1,32 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { styled, useTheme } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
 import MuiAppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import List from "@mui/material/List";
-import Typography from "@mui/material/Typography";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { Grid } from "@material-ui/core";
+import { ListItemText, ListItemButton,Box,List,Divider,IconButton,Toolbar,ListItem,InputBase,alpha,Grid} from "@mui/material";
 import Questions from "./pages/home/Questions";
 import { categories } from "../data/categoriesdata";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import SearchIcon from "@mui/icons-material/Search";
-import { alpha } from "@mui/material/styles";
-import InputBase from "@mui/material/InputBase";
 import Avtar from "./Avtar";
 import { questions } from "../data/questionsdata";
-const drawerWidth = 240;
+const drawerWidth = 280;
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -117,6 +103,7 @@ export default function DrawerMenu() {
   const [searchValue, setSearchValue] = useState("");
   const theme = useTheme();
   const [open, setOpen] = useState(true);
+  const [activeCategory, setActiveCategory] = useState(null);
   const [questionsArray, setQuestionsArray] = useState(
     questions.filter((item) => {
       return item.question.toLowerCase().includes(searchValue.toLowerCase());
@@ -144,9 +131,6 @@ export default function DrawerMenu() {
           >
             <MenuIcon />
           </IconButton>
-          {/* <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography> */}
 
           <div
             style={{ display: "flex", flexDirection: "row-reverse", flex: 3 }}
@@ -166,11 +150,10 @@ export default function DrawerMenu() {
                       return item.question
                         .toLowerCase()
                         .includes(e.target.value.toLowerCase());
-                    }),
-                    ...questions.filter((item) => {
-                      return item.category
-                        .toLowerCase()
-                        .includes(e.target.value.toLowerCase());
+                      //   ||
+                      // item.category
+                      //   .toLowerCase()
+                      //   .includes(e.target.value.toLowerCase())
                     }),
                   ]);
                 }}
@@ -213,19 +196,29 @@ export default function DrawerMenu() {
         <Divider />
         <List>
           {categories.map((text, index) => (
-            <ListItem button key={text} sx={{ textAlign: "center" }}>
-              <ListItemText
-                primary={text}
+            <ListItem button key={text} sx={{ padding: 0 }}>
+              <ListItemButton
+                selected={activeCategory === index}
                 onClick={() => {
                   setQuestionsArray(
-                    questions.filter((item) => {
-                      return item.category
-                        .toLowerCase()
-                        .includes(text.toLowerCase());
-                    })
+                    activeCategory === index
+                      ? questions.filter((item) => {
+                          return item.question
+                            .toLowerCase()
+                            .includes(searchValue.toLowerCase());
+                        })
+                      : questions.filter((item) => {
+                          return item.category
+                            .toLowerCase()
+                            .includes(text.toLowerCase());
+                        })
                   );
+                  setActiveCategory(activeCategory === index ? null : index);
                 }}
-              />
+                sx={{ textAlign: "center" }}
+              >
+                <ListItemText primary={text} />
+              </ListItemButton>
             </ListItem>
           ))}
         </List>
