@@ -22,7 +22,6 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={0} ref={ref} variant="filled" {...props} />;
 });
 
-
 function Questions({ questionsArray }) {
   const [reload, setReload] = useState(0);
   const [count, setCount] = useState(0);
@@ -86,12 +85,8 @@ function Questions({ questionsArray }) {
                     />
                   </TableCell>
 
-                  <TableCell>
-                    <a
-                      sx={{ textDecoration: "none", color: "black" }}
-                      href={question.link}
-                      target="_blank"
-                    >
+                  <TableCell >
+                    <a href={question.link} target="_blank" style={{color:"black",textDecoration:"none"}}>
                       {question.question}
                     </a>
                   </TableCell>

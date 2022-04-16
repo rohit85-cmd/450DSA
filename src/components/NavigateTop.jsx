@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavigationIcon from "@mui/icons-material/Navigation";
-import Fab from '@mui/material/Fab';
+import Fab from "@mui/material/Fab";
 import { Box, Zoom } from "@mui/material";
 
 function NavigateTop() {
@@ -33,7 +33,7 @@ function NavigateTop() {
           }}
         >
           <Fab color="secondary" variant="circular">
-            <NavigationIcon sx={{ mr: 1 }} onClick={scrollToTop} />
+            <NavigationIcon onClick={scrollToTop} />
           </Fab>
         </Zoom>
       )}
