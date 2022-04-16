@@ -1,5 +1,7 @@
 import React from 'react'
-import { Avatar, Grid, Button, Menu, MenuItem,Typography } from '@material-ui/core';
+import { Grid, Button, Menu, MenuItem,Typography } from '@mui/material';
+
+import Avatar from '@mui/material/Avatar';
 
 function Avtar({img}) {
 
@@ -8,7 +10,7 @@ function Avtar({img}) {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
     };
-    const handleClose = () => {
+    const handleClose = () => { 
         setAnchorEl(null);
     };
 
@@ -24,7 +26,7 @@ function Avtar({img}) {
                 style={{borderRadius:"65%"}}
                 >
 
-                <Avatar alt="Cindy Baker" src={img} />
+                <Avatar src={img} />
             </Button>
 
             <Menu
@@ -43,9 +45,12 @@ function Avtar({img}) {
                     horizontal: 'right',
                   }}
             >
-                <MenuItem onClick={handleClose}><Typography >Profile</Typography></MenuItem>
+                <MenuItem onClick={handleClose}><Typography>Profile</Typography></MenuItem>
             
-                <MenuItem onClick={handleClose}><Typography >Logout</Typography></MenuItem>
+                <MenuItem onClick={handleClose}><Typography>
+                    Logout
+                </Typography>
+                </MenuItem>
             </Menu>
         </Grid>
 

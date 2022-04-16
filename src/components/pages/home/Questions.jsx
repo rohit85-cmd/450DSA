@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { Box } from "@material-ui/core";
+import { Box } from "@mui/material";
 import {
   Button,
   Table,
@@ -7,16 +7,14 @@ import {
   TableRow,
   TableCell,
   TableBody,
-  makeStyles,
-} from "@material-ui/core";
+} from "@mui/material";
 import React from "react";
 import { questions } from "../../../data/questionsdata";
 import NavigateTop from "../../NavigateTop";
 import Checkbox from "@mui/material/Checkbox";
 import $ from "jquery";
 import { useState, useEffect } from "react";
-// import { toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
+
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 
@@ -24,18 +22,6 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={0} ref={ref} variant="filled" {...props} />;
 });
 
-// toast.configure();
-const useStyles = makeStyles((theme) => ({
-  extendedIcon: {
-    marginRight: theme.spacing(1),
-    position: "fixed",
-  },
-
-  link: {
-    textDecoration: "none",
-    color: "black",
-  },
-}));
 
 function Questions({ questionsArray }) {
   const [reload, setReload] = useState(0);
@@ -67,7 +53,6 @@ function Questions({ questionsArray }) {
       return checkbox;
     });
   };
-  const classes = useStyles();
   return (
     <>
       <Box sx={{ position: "relative", backgroundColor: "rgb(0 0 0 / 4%)" }}>
@@ -103,7 +88,7 @@ function Questions({ questionsArray }) {
 
                   <TableCell>
                     <a
-                      className={classes.link}
+                      sx={{ textDecoration: "none", color: "black" }}
                       href={question.link}
                       target="_blank"
                     >

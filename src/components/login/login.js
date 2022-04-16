@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
 import "./login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -8,9 +8,8 @@ import { Box } from "@mui/material";
 
 toast.configure();
 
-const Login = () => {
+const Login = ({ loginState, setLoggedIn }) => {
   const navigate = useNavigate();
-
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -28,7 +27,9 @@ const Login = () => {
     const res = await axios.post("http://localhost:4000/login", user);
     if (res.data.message === "Login successful") {
       toast.success("Login successful", { autoClose: 2000 });
+      setLoggedIn(true);
       navigate("/home");
+      
     } else {
       toast.error("Not a valid user", { autoClose: 800 });
     }
@@ -37,30 +38,31 @@ const Login = () => {
   return (
     <Box className="login-container">
       <Box className="login">
-      <h1>Login</h1>
-      <input
-        type="text"
-        name="email"
-        value={user.email}
-        onChange={handleChange}
-        placeholder="Enter your Email"
-      ></input>
-      <input
-        type="password"
-        name="password"
-        value={user.password}
-        onChange={handleChange}
-        placeholder="Enter your Password"
-      ></input>
+        <h1>Login</h1>
+        <input
+          type="text"
+          name="email"
+          value={user.email}
+          onChange={handleChange}
+          placeholder="Enter your Email"
+        ></input>
+        <input
+          type="password"
+          name="password"
+          value={user.password}
+          onChange={handleChange}
+          placeholder="Enter your Password"
+        ></input>
 
-      <div className="button" onClick={login}>
-        Login
-      </div>
+        <div className="button" onClick={login}>
+          {console.log("login status", loginState)}
+          Login
+        </div>
 
-      <div>or</div>
-      <div className="button" onClick={() => navigate("/register")}>
-        Register
-      </div>
+        <div>or</div>
+        <div className="button" onClick={() => navigate("/register")}>
+          Register
+        </div>
       </Box>
     </Box>
   );

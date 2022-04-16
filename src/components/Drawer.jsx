@@ -6,7 +6,19 @@ import MuiAppBar from "@mui/material/AppBar";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { ListItemText, ListItemButton,Box,List,Divider,IconButton,Toolbar,ListItem,InputBase,alpha,Grid} from "@mui/material";
+import {
+  ListItemText,
+  ListItemButton,
+  List,
+  Divider,
+  IconButton,
+  Toolbar,
+  ListItem,
+  InputBase,
+  alpha,
+  Grid,
+} from "@mui/material";
+import { Box } from "@mui/material";
 import Questions from "./pages/home/Questions";
 import { categories } from "../data/categoriesdata";
 import SearchIcon from "@mui/icons-material/Search";
@@ -99,7 +111,10 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-export default function DrawerMenu() {
+
+
+export default function DrawerMenu({loginState, setLoggedIn}) {
+  console.log("login status",loginState);
   const [searchValue, setSearchValue] = useState("");
   const theme = useTheme();
   const [open, setOpen] = useState(true);
@@ -161,7 +176,7 @@ export default function DrawerMenu() {
             </Search>
           </div>
 
-          <Avtar img={require("./Images/MyImg.jpg")} />
+          <Avtar img={require("./Images/MyImg.jpg")}/>
         </Toolbar>
       </AppBar>
       <Drawer
